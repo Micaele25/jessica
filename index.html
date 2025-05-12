@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechParaTodos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans pt-16">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-blue-900 text-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold">TechParaTodos</a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-gray-300 transition">Home</a>
+                <a href="#cursos" class="hover:text-gray-300 transition">Cursos</a>
+                <a href="#perfil" class="hover:text-gray-300 transition">Perfil</a>
+            </div>
+
+            <!-- Hamburger Menu (for mobile) -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-900">
+            <div class="flex flex-col items-center space-y-4 py-4">
+                <a href="#" class="hover:text-gray-300 transition">Home</a>
+                <a href="#cursos" class="hover:text-gray-300 transition">Cursos</a>
+                <a href="#perfil" class="hover:text-gray-300 transition">Perfil</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section (Static Image) -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <img src="banner.png" class="img-fluid w-full h-auto" alt="Banner Volte a Estudar - Cursos de Tecnologia">
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="py-12 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <!-- Tabs -->
+            <div class="flex justify-center space-x-4 mb-8" id="course-tabs">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition" data-category="IA">IA</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition" data-category="Backend">Backend</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition" data-category="Frontend">Frontend</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition" data-category="Devops">Devops</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition" data-category="UX Design">UX Design</button>
+            </div>
+
+            <!-- Course Cards Container -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6" id="course-container">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-8 space-x-2" id="pagination">
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition" id="prev-page"><</button>
+                <span class="bg-blue-500 text-white px-4 py-2 rounded" id="current-page">1</span>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition" id="next-page">></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Depoimentos de Alunos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-start">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-gray-500">[Foto]</span>
+                    </div>
+                    <div>
+                        <p class="text-gray-700">"Os cursos da TechParaTodos mudaram minha vida! Consegui um emprego como desenvolvedor em menos de 6 meses."</p>
+                        <p class="mt-2 font-semibold">João Silva - Desenvolvedor</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md flex items-start">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-gray-500">[Foto]</span>
+                    </div>
+                    <div>
+                        <p class="text-gray-700">"A didática é incrível, e os professores são muito atenciosos. Recomendo para todos que querem entrar na área de tecnologia."</p>
+                        <p class="mt-2 font-semibold">Maria Oliveira - Estudante</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-900 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-2xl font-bold">TechParaTodos</h3>
+                <p>(11) 94233-2945</p>
+                <p>techparatodos@gmail.com</p>
+            </div>
+            <div class="mb-4 md:mb-0">
+                <h4 class="text-lg font-semibold">Contato</h4>
+                <p>(11) 94233-2945</p>
+                <p>atendimento@techparatodos.com</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold">Endereço</h4>
+                <p>Rua Nova América, 123</p>
+                <p>São Paulo, SP - CEP: 01234-000</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
