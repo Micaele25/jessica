@@ -43,6 +43,21 @@ const courses = [
     },
   },
 
+  {
+    category: 'IA',
+    title: 'Inteligência Artificial na Prática',
+    description: 'Aprenda IA do zero!',
+    rating: 5,
+    reviews: 120,
+    image: 'img/curso.jpg',
+    duration: 80,
+    modules: 8,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+
   // Backend
   {
     category: 'Backend',
