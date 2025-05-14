@@ -1,43 +1,18 @@
 const courses = [
+  // IA
   {
     category: 'IA',
     title: 'Inteligência Artificial na Prática',
     description: 'Aprenda IA do zero!',
     rating: 5,
     reviews: 120,
-    image: 'curso.jpg',
-  },
-  {
-    category: 'Backend',
-    title: 'Backend com Node.js',
-    description: 'Crie APIs robustas!',
-    rating: 4,
-    reviews: 85,
-    image: 'curso.jpg',
-  },
-  {
-    category: 'Frontend',
-    title: 'Frontend com React',
-    description: 'Desenvolva interfaces modernas!',
-    rating: 5,
-    reviews: 150,
-    image: 'curso.jpg',
-  },
-  {
-    category: 'Devops',
-    title: 'DevOps na Prática',
-    description: 'Automatize seus projetos!',
-    rating: 4,
-    reviews: 90,
-    image: 'curso.jpg',
-  },
-  {
-    category: 'UX Design',
-    title: 'UX Design Essencial',
-    description: 'Crie experiências incríveis!',
-    rating: 5,
-    reviews: 110,
-    image: 'curso.jpg',
+    image: 'img/curso.jpg',
+    duration: 40,
+    modules: 6,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
   },
   {
     category: 'IA',
@@ -45,7 +20,43 @@ const courses = [
     description: 'Domine algoritmos de ML!',
     rating: 4,
     reviews: 95,
-    image: 'curso.jpg',
+    image: 'img/curso.jpg',
+    duration: 55,
+    modules: 8,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+  {
+    category: 'IA',
+    title: 'Redes Neurais com TensorFlow',
+    description: 'Construa modelos com TensorFlow!',
+    rating: 5,
+    reviews: 130,
+    image: 'img/curso.jpg',
+    duration: 48,
+    modules: 7,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+
+  // Backend
+  {
+    category: 'Backend',
+    title: 'Backend com Node.js',
+    description: 'Crie APIs robustas!',
+    rating: 4,
+    reviews: 85,
+    image: 'img/curso.jpg',
+    duration: 36,
+    modules: 5,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
   },
   {
     category: 'Backend',
@@ -53,7 +64,43 @@ const courses = [
     description: 'Construa APIs eficientes!',
     rating: 4,
     reviews: 70,
-    image: 'curso.jpg',
+    image: 'img/curso.jpg',
+    duration: 42,
+    modules: 6,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+  {
+    category: 'Backend',
+    title: 'Spring Boot para Web',
+    description: 'Crie sistemas com Java e Spring!',
+    rating: 5,
+    reviews: 100,
+    image: 'img/curso.jpg',
+    duration: 60,
+    modules: 9,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+
+  // Frontend
+  {
+    category: 'Frontend',
+    title: 'Frontend com React',
+    description: 'Desenvolva interfaces modernas!',
+    rating: 5,
+    reviews: 150,
+    image: 'img/curso.jpg',
+    duration: 50,
+    modules: 7,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
   },
   {
     category: 'Frontend',
@@ -61,7 +108,115 @@ const courses = [
     description: 'Aprenda Vue do zero!',
     rating: 3,
     reviews: 60,
-    image: 'curso.jpg',
+    image: 'img/curso.jpg',
+    duration: 35,
+    modules: 5,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+  {
+    category: 'Frontend',
+    title: 'Interfaces com Angular',
+    description: 'Crie SPAs com Angular!',
+    rating: 4,
+    reviews: 80,
+    image: 'img/curso.jpg',
+    duration: 45,
+    modules: 6,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+
+  // Devops
+  {
+    category: 'Devops',
+    title: 'DevOps na Prática',
+    description: 'Automatize seus projetos!',
+    rating: 4,
+    reviews: 90,
+    image: 'img/curso.jpg',
+    duration: 38,
+    modules: 6,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+  {
+    category: 'Devops',
+    title: 'Docker e Kubernetes',
+    description: 'Orquestre contêineres como um profissional!',
+    rating: 5,
+    reviews: 140,
+    image: 'img/curso.jpg',
+    duration: 52,
+    modules: 8,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+  {
+    category: 'Devops',
+    title: 'CI/CD com GitHub Actions',
+    description: 'Automatize deploys com CI/CD!',
+    rating: 4,
+    reviews: 75,
+    image: 'img/curso.jpg',
+    duration: 30,
+    modules: 4,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+
+  // UX Design
+  {
+    category: 'UX Design',
+    title: 'UX Design Essencial',
+    description: 'Crie experiências incríveis!',
+    rating: 5,
+    reviews: 110,
+    image: 'img/curso.jpg',
+    duration: 46,
+    modules: 7,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+  {
+    category: 'UX Design',
+    title: 'Prototipagem com Figma',
+    description: 'Prototipe interfaces com Figma!',
+    rating: 4,
+    reviews: 95,
+    image: 'img/curso.jpg',
+    duration: 32,
+    modules: 5,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
+  },
+  {
+    category: 'UX Design',
+    title: 'Design Thinking',
+    description: 'Resolva problemas com empatia e criatividade!',
+    rating: 5,
+    reviews: 125,
+    image: 'img/curso.jpg',
+    duration: 41,
+    modules: 6,
+    professor: {
+      name: 'Professor Guanabara',
+      photo: 'img/guanabara.jpg',
+    },
   },
 ];
 
@@ -103,23 +258,30 @@ function renderCourses() {
                       course.title
                     }</h3>
                     <div class="flex items-center gap-2">
-                        <img src="guanabara.jpg" alt="Foto professor" class="w-12 h-12 rounded-full" />
-                        <span class="text-sm text-gray-800 font-medium">Professor Guanabara</span>
+                        <img src="${
+                          course.professor.photo
+                        }" alt="Foto do professor" class="w-12 h-12 rounded-full" />
+<span class="text-sm text-gray-800 font-medium">${course.professor.name}</span>
+
                     </div>
                     <div class="flex flex-col gap-4 mt-2">
                     <div class="flex flex-row gap-2">
                     <div class="items-center bg-white border-2 border-[#0B4B83] px-4 py-1 rounded">
-                            <span class="text-blue-800 font-bold">40h</span>
-                        </div>
-                        <span class="text-[#0B4B83]">duração</span>
+                      <span class="text-blue-800 font-bold">${
+                        course.duration
+                      }h</span>
                     </div>
-                    <div class="flex flex-row gap-2">
-                        <div class="items-center bg-white border-2 border-[#0B4B83] px-4 py-1 rounded">
-                            <span class="text-blue-800 font-bold">6</span>
-                        </div>
-                        <span class="text-[#0B4B83]">módulos</span>
+                    <span class="text-[#0B4B83]">duração</span>
+                  </div>
+                  <div class="flex flex-row gap-2">
+                    <div class="items-center bg-white border-2 border-[#0B4B83] px-4 py-1 rounded">
+                      <span class="text-blue-800 font-bold">${
+                        course.modules
+                      }</span>
                     </div>
-                    </div>
+                    <span class="text-[#0B4B83]">módulos</span>
+                  </div>
+
                     <div class="flex justify-between items-center mt-3">
                         <div class="flex items-center text-base text-blue-900 bg-[#D6EBFE] px-8 py-2 rounded-md">
                             ${course.rating.toFixed(
