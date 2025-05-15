@@ -1,8 +1,8 @@
-# Plataforma de Cursos Online
+# TechParaTodos
 
 Este é um projeto de uma plataforma de cursos online
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Frontend
 - **HTML5** - Estruturação da página
@@ -14,8 +14,7 @@ Este é um projeto de uma plataforma de cursos online
 - Sistema de busca de cursos
 - Layout responsivo
 
-## 🚀 Como Executar
+## Como Executar
 
 1. Clone o repositório
 2. Abra o arquivo `index.html` em seu navegador
-3. Explore a plataforma!
