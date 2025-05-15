@@ -319,47 +319,35 @@ function renderCourses() {
     const stars = '★'.repeat(course.rating) + '☆'.repeat(5 - course.rating);
     const courseCard = `
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-<img src="${
-      course.image
-    }" alt="Imagem do curso" class="w-full h-40 object-cover" />
+                <img src="${course.image}" alt="Imagem do curso" class="w-full h-40 object-cover" />
                 <div class="p-4 flex flex-col gap-2">
-                    <h3 class="text-lg font-bold text-[#1E3A8A]">${
-                      course.title
-                    }</h3>
+                    <h3 class="text-lg font-bold text-[#1E3A8A]">${course.title}</h3>
                     <div class="flex items-center gap-2">
-                        <img src="${
-                          course.professor.photo
-                        }" alt="Foto do professor" class="w-12 h-12 rounded-full" />
-<span class="text-sm text-gray-800 font-medium">${course.professor.name}</span>
-
+                        <img src="${course.professor.photo}" alt="Foto do professor" class="w-12 h-12 rounded-full" />
+                        <span class="text-sm text-gray-800 font-medium">${course.professor.name}</span>
                     </div>
                     <div class="flex flex-col gap-4 mt-2">
-                    <div class="flex flex-row gap-2">
-                    <div class="items-center bg-white border-2 border-[#0B4B83] px-4 py-1 rounded">
-                      <span class="text-blue-800 font-bold">${
-                        course.duration
-                      }h</span>
-                    </div>
-                    <span class="text-[#0B4B83]">duração</span>
-                  </div>
-                  <div class="flex flex-row gap-2">
-                    <div class="items-center bg-white border-2 border-[#0B4B83] px-4 py-1 rounded">
-                      <span class="text-blue-800 font-bold">${
-                        course.modules
-                      }</span>
-                    </div>
-                    <span class="text-[#0B4B83]">módulos</span>
-                  </div>
-
-                    <div class="flex justify-between items-center mt-3">
-                        <div class="flex items-center text-base text-blue-900 bg-[#D6EBFE] px-8 py-2 rounded-md">
-                            ${course.rating.toFixed(
-                              1
-                            )} <span class="ml-1 text-[#0B4B83]">${stars}</span>
+                        <div class="flex flex-row gap-2">
+                            <div class="items-center bg-white border-2 border-[#0B4B83] px-4 py-1 rounded">
+                                <span class="text-blue-800 font-bold">${course.duration}h</span>
+                            </div>
+                            <span class="text-[#0B4B83]">duração</span>
                         </div>
-                        <button class="bg-[#0B4B83] text-white px-8 py-2 rounded hover:bg-blue-800 text-base font-medium">
-                            Inscrever
-                        </button>
+                        <div class="flex flex-row gap-2">
+                            <div class="items-center bg-white border-2 border-[#0B4B83] px-4 py-1 rounded">
+                                <span class="text-blue-800 font-bold">${course.modules}</span>
+                            </div>
+                            <span class="text-[#0B4B83]">módulos</span>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-1 mt-3">
+                            <div class="flex items-center justify-center text-base text-blue-900 bg-[#D6EBFE] px-6 py-2 rounded-md flex-1">
+                                ${course.rating.toFixed(1)} <span class="ml-1 text-[#0B4B83]">${stars}</span>
+                            </div>
+                            <button class="bg-[#0B4B83] text-white px-6 py-2 rounded hover:bg-blue-800 text-base font-medium flex-1">
+                                Inscrever
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
