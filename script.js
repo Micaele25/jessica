@@ -239,6 +239,7 @@ const courses = [
 const coursesPerPage = 4;
 let currentPage = 1;
 let currentCategory = 'IA';
+let searchText = '';
 
 // Elementos DOM
 const courseContainer = document.getElementById('course-container');
@@ -246,12 +247,17 @@ const tabs = document.querySelectorAll('#course-tabs button');
 const prevPageBtn = document.getElementById('prev-page');
 const nextPageBtn = document.getElementById('next-page');
 const currentPageSpan = document.getElementById('current-page');
+const searchInput = document.querySelector('input[type="text"]');
 
 // Função para renderizar cursos
 function renderCourses() {
-  const filteredCourses = courses.filter(
-    (course) => course.category === currentCategory
-  );
+  const filteredCourses = courses.filter((course) => {
+    const matchesCategory = course.category === currentCategory;
+    const matchesSearch = course.title.toLowerCase().includes(searchText.toLowerCase()) ||
+                         course.description.toLowerCase().includes(searchText.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+  
   const totalPages = Math.ceil(filteredCourses.length / coursesPerPage);
   if (currentPage > totalPages) currentPage = totalPages || 1;
 
@@ -260,6 +266,15 @@ function renderCourses() {
   const coursesToShow = filteredCourses.slice(start, end);
 
   courseContainer.innerHTML = '';
+
+  if (coursesToShow.length === 0) {
+    courseContainer.innerHTML = `
+      <div class="col-span-full text-center py-8">
+        <p class="text-gray-600 text-lg">Nenhum curso encontrado para "${searchText}"</p>
+      </div>
+    `;
+    return;
+  }
 
   coursesToShow.forEach((course) => {
     const stars = '★'.repeat(course.rating) + '☆'.repeat(5 - course.rating);
@@ -353,6 +368,13 @@ nextPageBtn.addEventListener('click', () => {
     currentPage++;
     renderCourses();
   }
+});
+
+// Evento para pesquisa
+searchInput.addEventListener('input', (e) => {
+  searchText = e.target.value;
+  currentPage = 1;
+  renderCourses();
 });
 
 // Renderizar cursos iniciais
