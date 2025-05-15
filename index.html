@@ -63,22 +63,36 @@
                 </div>
             </div>
 
-            <div class="bg-[#8AB4D9] rounded-lg p-4 sm:p-6 flex flex-wrap gap-2 justify-center">
-                <button
-                    class="bg-blue-100 text-blue-700 px-6 py-2 rounded-lg border border-blue-200 hover:bg-blue-200 transition font-medium"
-                    data-category="IA">IA</button>
-                <button
-                    class="bg-white text-blue-700 px-6 py-2 rounded-lg border border-blue-200 hover:bg-blue-50 transition font-medium"
-                    data-category="Backend">Backend</button>
-                <button
-                    class="bg-white text-blue-700 px-6 py-2 rounded-lg border border-blue-200 hover:bg-blue-50 transition font-medium"
-                    data-category="Frontend">Frontend</button>
-                <button
-                    class="bg-white text-blue-700 px-6 py-2 rounded-lg border border-blue-200 hover:bg-blue-50 transition font-medium"
-                    data-category="Devops">Devops</button>
-                <button
-                    class="bg-white text-blue-700 px-6 py-2 rounded-lg border border-blue-200 hover:bg-blue-50 transition font-medium"
-                    data-category="UX Design">UX Design</button>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#8AB4D9] p-3 rounded-full hover:bg-[#0B4B83] transition-colors shadow-md flex-shrink-0" id="prev-categories">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="bg-[#8AB4D9] rounded-lg p-4 sm:p-6 overflow-x-auto scrollbar-hide flex-1">
+                    <div class="flex gap-4 min-w-max justify-center">
+                        <button
+                            class="bg-blue-100 text-blue-700 w-[188px] h-12 rounded-[5px] border border-blue-200 hover:bg-blue-200 transition font-medium whitespace-nowrap"
+                            data-category="IA">IA</button>
+                        <button
+                            class="bg-white text-blue-700 w-[188px] h-12 rounded-[5px] border border-blue-200 hover:bg-blue-50 transition font-medium whitespace-nowrap"
+                            data-category="Backend">Backend</button>
+                        <button
+                            class="bg-white text-blue-700 w-[188px] h-12 rounded-[5px] border border-blue-200 hover:bg-blue-50 transition font-medium whitespace-nowrap"
+                            data-category="Frontend">Frontend</button>
+                        <button
+                            class="bg-white text-blue-700 w-[188px] h-12 rounded-[5px] border border-blue-200 hover:bg-blue-50 transition font-medium whitespace-nowrap"
+                            data-category="Devops">Devops</button>
+                        <button
+                            class="bg-white text-blue-700 w-[188px] h-12 rounded-[5px] border border-blue-200 hover:bg-blue-50 transition font-medium whitespace-nowrap"
+                            data-category="UX Design">UX Design</button>
+                    </div>
+                </div>
+                <button class="bg-[#8AB4D9] p-3 rounded-full hover:bg-[#0B4B83] transition-colors shadow-md flex-shrink-0" id="next-categories">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
         </div>
 

@@ -249,6 +249,45 @@ const nextPageBtn = document.getElementById('next-page');
 const currentPageSpan = document.getElementById('current-page');
 const searchInput = document.querySelector('input[type="text"]');
 
+// Controle de rolagem das categorias
+const categoriesContainer = document.querySelector('.overflow-x-auto');
+const prevCategoriesBtn = document.getElementById('prev-categories');
+const nextCategoriesBtn = document.getElementById('next-categories');
+
+function updateCategoriesButtons() {
+    const container = categoriesContainer;
+    const hasOverflow = container.scrollWidth > container.clientWidth;
+    
+    // Sempre mostrar os botões se houver overflow
+    prevCategoriesBtn.style.display = hasOverflow ? 'block' : 'none';
+    nextCategoriesBtn.style.display = hasOverflow ? 'block' : 'none';
+    
+    // Atualizar estado dos botões baseado na posição da rolagem
+    prevCategoriesBtn.style.opacity = container.scrollLeft > 0 ? '1' : '0.5';
+    nextCategoriesBtn.style.opacity = 
+        container.scrollLeft < (container.scrollWidth - container.clientWidth - 1) ? '1' : '0.5';
+}
+
+prevCategoriesBtn.addEventListener('click', () => {
+    categoriesContainer.scrollBy({
+        left: -200,
+        behavior: 'smooth'
+    });
+});
+
+nextCategoriesBtn.addEventListener('click', () => {
+    categoriesContainer.scrollBy({
+        left: 200,
+        behavior: 'smooth'
+    });
+});
+
+categoriesContainer.addEventListener('scroll', updateCategoriesButtons);
+window.addEventListener('resize', updateCategoriesButtons);
+
+// Inicializar estado dos botões
+updateCategoriesButtons();
+
 // Função para renderizar cursos
 function renderCourses() {
   const filteredCourses = courses.filter((course) => {
